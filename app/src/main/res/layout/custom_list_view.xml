@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="150dp"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:padding="5dp"
+    android:layout_marginLeft="21dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="135dp"
@@ -15,10 +16,11 @@
             android:id="@+id/cardViewButton"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:text="Button"
-            android:backgroundTint="@color/white"
+            android:text=""
+            android:backgroundTint="@color/almostWhite"
             android:elevation="1dp"
             android:layout_margin="10dp"
+
 
 
             />
