@@ -37,10 +37,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         String title = notes.get(i).getTitle();
-        //long id = notes.get(i).getId();
+        long id = notes.get(i).getId();
 
         viewHolder.nTitle.setText(title);
-
+        viewHolder.nId.setText(String.valueOf(notes.get(i).getId()));
 
 
 
@@ -52,19 +52,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView nTitle;
+        TextView nTitle, nId;
 
         Button cardViewBtn = (Button) itemView.findViewById(R.id.cardViewButton);
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nTitle = itemView.findViewById(R.id.noteTitle);
+            nId = itemView.findViewById(R.id.listId);
 
 
             cardViewBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(view.getContext(),Details.class);
-                    i.putExtra("id",notes.get(getBindingAdapterPosition()).getId());
+                   // i.putExtra("id",notes.get(getAdapterPosition()).getId());
                     view.getContext().startActivity(i);
                 }
             });

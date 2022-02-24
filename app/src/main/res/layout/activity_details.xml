@@ -26,4 +26,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/listId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="77dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,7 @@ import org.w3c.dom.Text;
 public class AddNote extends AppCompatActivity {
 
     EditText editTextTextPersonName, editTextTextMultiLine;
+    TextView listId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class AddNote extends AppCompatActivity {
         setContentView(R.layout.activity_add_note);
         editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
         editTextTextMultiLine = findViewById(R.id.editTextTextMultiLine);
+        listId = findViewById(R.id.listId);
 
 
         Button saveBtn = (Button) findViewById(R.id.saveBtn);
@@ -56,8 +58,13 @@ public class AddNote extends AppCompatActivity {
 
 
                 Note note = new Note(editTextTextPersonName.getText().toString(),editTextTextMultiLine.getText().toString());
+                //NoteDatabase db = new NoteDatabase(AddNote.this);
+                //db.addNote(note);
+
                 NoteDatabase db = new NoteDatabase(AddNote.this);
-                db.addNote(note);
+                long id = db.addNote(note);
+                Note check = db.getNote(id);
+
                 Intent i = new Intent(view.getContext(),MainActivity.class);
                 view.getContext().startActivity(i);
 
