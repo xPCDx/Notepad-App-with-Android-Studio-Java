@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         Button noteBtn = (Button) findViewById(R.id.button5);
         bgbtn.setVisibility(View.GONE);
 
+
+
         NoteDatabase db =  new NoteDatabase(this);
         notes = db.getNotes();
         recyclerView = findViewById(R.id.listOfNotes);
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 view.getContext().startActivity(i);
             }
         });
+
 
     }
 }
