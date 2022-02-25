@@ -14,8 +14,8 @@ import java.util.List;
 public class NoteDatabase extends SQLiteOpenHelper {
 
     private static final int database_version = 4;
-    private static final String database_name = "NoteDBs";
-    private static final String database_table = "NoteTables";
+    private static final String database_name = "NoteDBb";
+    private static final String database_table = "NoteTableb";
 
     private static final String key_id = "id";
     private static final String key_title = "title";
@@ -31,7 +31,7 @@ public class NoteDatabase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " +
                 database_table + " ("+
-                key_id+ "INT PRIMARY KEY, " +
+                key_id+ " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 key_title + " TEXT, "+
                 key_content + " TEXT"+")";
 

@@ -25,7 +25,7 @@ public class Details extends AppCompatActivity {
         NoteDatabase db = new NoteDatabase(this);
         Note note = db.getNote(id);
 
-        detailsTitle.setText(note.getContent());
+        detailsTitle.setText(note.getTitle());
         detailsDescription.setText(note.getContent());
 
 

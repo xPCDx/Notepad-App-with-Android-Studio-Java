@@ -24,7 +24,11 @@ public class AddNote extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_add_note);
+
+
+
         editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
         editTextTextMultiLine = findViewById(R.id.editTextTextMultiLine);
         listId = findViewById(R.id.listId);
