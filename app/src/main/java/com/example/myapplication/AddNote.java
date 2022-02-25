@@ -46,6 +46,7 @@ public class AddNote extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
 
+
             }
 
             @Override
@@ -59,19 +60,25 @@ public class AddNote extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                if (editTextTextPersonName.getText().length() != 0) {
 
 
-                Note note = new Note(editTextTextPersonName.getText().toString(),editTextTextMultiLine.getText().toString());
+
+                    Note note = new Note(editTextTextPersonName.getText().toString(),editTextTextMultiLine.getText().toString());
                 //NoteDatabase db = new NoteDatabase(AddNote.this);
                 //db.addNote(note);
 
-                NoteDatabase db = new NoteDatabase(AddNote.this);
-                long id = db.addNote(note);
-                Note check = db.getNote(id);
+                    NoteDatabase db = new NoteDatabase(AddNote.this);
+                    long id = db.addNote(note);
+                    Note check = db.getNote(id);
 
-                Intent i = new Intent(view.getContext(),MainActivity.class);
-                view.getContext().startActivity(i);
-
+                    Intent i = new Intent(view.getContext(),MainActivity.class);
+                    view.getContext().startActivity(i);
+                }
+                else {
+                    Intent i = new Intent(view.getContext(),MainActivity.class);
+                    view.getContext().startActivity(i);
+                }
 
 
             }
