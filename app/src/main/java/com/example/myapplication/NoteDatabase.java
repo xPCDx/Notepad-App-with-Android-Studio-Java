@@ -88,4 +88,10 @@ public class NoteDatabase extends SQLiteOpenHelper {
         }
         return allNotes;
     }
+
+    void deleteNote(long id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(database_table,key_id+"=?",new String[] {String.valueOf(id)});
+        db.close();
+    }
 }

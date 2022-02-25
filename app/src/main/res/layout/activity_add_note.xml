@@ -38,7 +38,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:hint="Add text here..."
-        android:inputType="textMultiLine"
+        android:inputType="textCapSentences|textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/saveBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

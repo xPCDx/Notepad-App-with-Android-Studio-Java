@@ -10,12 +10,12 @@
         android:id="@+id/detailsDescription"
         android:layout_width="391dp"
         android:layout_height="525dp"
+        android:scrollbars="vertical"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsTitle"
-        android:scrollbars="vertical"/>
+        app:layout_constraintTop_toBottomOf="@+id/detailsTitle" />
 
     <TextView
         android:id="@+id/detailsTitle"
@@ -35,5 +35,53 @@
         android:visibility="gone"
         tools:layout_editor_absoluteX="68dp"
         tools:layout_editor_absoluteY="77dp" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="60dp"
+
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/white"
+
+
+        android:orientation="horizontal"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsDescription"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+
+            android:id="@+id/deleteBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationY="4dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/editBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationY="4dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
