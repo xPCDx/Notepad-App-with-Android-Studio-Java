@@ -44,6 +44,14 @@ public class Details extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         });
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(),Edit.class);
+                i.putExtra("id",note.getId());
+                startActivity(i);
+            }
+        });
     }
 
 }
