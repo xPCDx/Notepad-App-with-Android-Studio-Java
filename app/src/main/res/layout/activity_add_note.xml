@@ -17,10 +17,14 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Enter title..."
-        android:inputType="textPersonName"
+        android:inputType="textCapSentences"
+        android:maxLength="50"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"

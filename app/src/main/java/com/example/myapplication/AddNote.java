@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -32,12 +34,16 @@ public class AddNote extends AppCompatActivity {
         editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
         editTextTextMultiLine = findViewById(R.id.editTextTextMultiLine);
         listId = findViewById(R.id.listId);
+        editTextTextPersonName.requestFocus();
+        
 
 
         Button saveBtn = (Button) findViewById(R.id.saveBtn);
         saveBtn.setVisibility(View.VISIBLE);
 
         editTextTextPersonName.addTextChangedListener(new TextWatcher() {
+
+
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
 

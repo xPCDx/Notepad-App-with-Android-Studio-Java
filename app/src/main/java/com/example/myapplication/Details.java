@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 public class Details extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class Details extends AppCompatActivity {
         detailsTitle.setText(note.getTitle());
         detailsDescription.setText(note.getContent());
 
-
+        detailsDescription.setMovementMethod(new ScrollingMovementMethod());
 
     }
 }
