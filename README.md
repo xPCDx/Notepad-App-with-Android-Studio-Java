@@ -1,3 +1,3 @@
 Notepad App with Android Studio & Java
 
-[](notepad.gif)
+![](notepad.gif)
