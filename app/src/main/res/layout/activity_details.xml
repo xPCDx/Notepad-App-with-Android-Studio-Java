@@ -6,53 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".Details">
 
-    <TextView
-        android:id="@+id/detailsDescription"
-        android:layout_width="391dp"
-        android:layout_height="525dp"
-        android:scrollbars="vertical"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsTitle" />
-
-    <TextView
-        android:id="@+id/detailsTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="59dp"
-        android:text="TextView"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+
+        android:background="@drawable/box_border"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:translationY="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/detailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="TextView"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:translationY="-10dp" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/listId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="TextView"
         android:visibility="gone"
         tools:layout_editor_absoluteX="68dp"
         tools:layout_editor_absoluteY="77dp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="409dp"
         android:layout_height="62dp"
+
         android:layout_marginLeft="60dp"
-
-        android:layout_marginTop="1dp"
         android:layout_marginRight="60dp"
+
+
         android:background="@color/white"
-
-
         android:orientation="horizontal"
         android:outlineProvider="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsDescription"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
 
@@ -60,28 +64,55 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:translationY="4dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="15dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="Delete"
             android:textAllCaps="false"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:translationY="4dp" />
 
         <Button
             android:id="@+id/editBtn"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:translationY="4dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="Edit"
             android:textAllCaps="false"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:translationY="4dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+
+
+        android:background="@drawable/box_border"
+        android:translationY="60dp"
+
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginBottom="130dp">
+
+        <TextView
+            android:id="@+id/detailsDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+
+
+            android:scrollbars="vertical"
+            android:text="TextView"
+
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/almostWhite" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

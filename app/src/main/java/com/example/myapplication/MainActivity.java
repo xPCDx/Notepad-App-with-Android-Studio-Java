@@ -54,8 +54,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                NoteOrChecklist.setVisibility(View.VISIBLE);
-                bgbtn.setVisibility(View.VISIBLE);
+                //NoteOrChecklist.setVisibility(View.VISIBLE);
+                //bgbtn.setVisibility(View.VISIBLE);
+
+                Intent i = new Intent(view.getContext(),AddNote.class);
+                view.getContext().startActivity(i);
             }
 
         });
