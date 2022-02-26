@@ -1,1 +1,1 @@
-# Notepad-App-with-Android-Studio-Java
+Notepad App with Android Studio & Java
